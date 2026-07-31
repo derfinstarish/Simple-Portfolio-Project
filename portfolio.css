@@ -1,0 +1,202 @@
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      min-height: 100vh;
+      background-color: #f8f9fa;
+      border-right: 1px solid #e9ecef;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 2rem 1.5rem;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .brand-logo {
+      color: black;
+      font-weight: 700;
+      letter-spacing: 4px;
+      padding: 12px;
+      text-align: center;
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      line-height: 1.2;
+      font-size: 50px;
+    }
+
+    .nav-link {
+      color: #999;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #000;
+    }
+
+    .sidebar-footer {
+      text-align: center;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    .hero-slide {
+      height: 80vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 3rem;
+      max-width: 500px;
+      margin-top: 6rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .service-box {
+      padding: 2rem;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+
+    .work-item {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .work-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .work-item:hover .work-img {
+      transform: scale(1.05);
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+
+    .navbar-brand-logo {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-style: italic;
+      letter-spacing: 0.08em;
+    }
+
+    @media screen and (max-width: 320px) {
+      #sidebarMenu{
+        background-color: grey;
+        padding: 1rem;
+        .right{
+          scroll-behavior: none;
+        }
+      }
+    }
+
+    #navbar {
+      z-index: 1030;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+
+    #navbar .navbar-brand {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+    }
+
+    #navbar .navbar-toggler,
+    #navbar .nav-button,
+    #navbar .btn {
+      margin-left: auto;
+    }
+
+    @media (max-width: 767.98px) {
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto !important;
+        min-height: auto !important;
+        border-radius: 0;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.08);
+        padding: 0.5rem 0 !important;
+      }
+
+      #navbar .bg-dark {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
+      }
+
+      #navbar .collapse.d-md-block {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 1035;
+        margin-top: 10px;
+        padding: 1px 0 !important;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.08);
+      }
+
+      #navbar .nav-link {
+        padding: 5px 0;
+        margin: 20px;
+      }
+
+      #navbar .navbar-toggler {
+        z-index: 1036;
+      }
+
+      #right {
+        padding-top: 60px;
+      }
+    }
