@@ -14,12 +14,12 @@
 <div class="container-fluid">
   <div class="row">
     <div id="navbar" class="col-12 col-md-4 col-lg-2 bg-white border-end vh-100 d-flex flex-column justify-content-between align-items-center align-items-md-start text-center py-4 position-sticky top-0">
-      <div class="w-100">
+      <div class="w-100" id="navbarContent">
         <div class="d-flex justify-content-center align-items-center w-100">
           <div class=" text-dark d-inline-block p-3 fs-5 fw-bold">
             <a href="#home" class="text-dark text-decoration-none fs-5 navbar-brand-logo">PORTFOLIO</a>
           </div>
-          <button class="navbar-toggler d-md-none border-0 p-0 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="#navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler d-md-none border-0 p-0 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list fs-3"></i>
           </button>
         </div>
@@ -194,9 +194,10 @@
   });
 
   document.addEventListener('DOMContentLoaded', function () {
-    var navbarMenu = document.getElementById('navbarMenu');
     var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarMenu = document.getElementById('navbarMenu');
     var navLinks = document.querySelectorAll('#navbarMenu .nav-link');
+    var bsNavbarMenu = navbarMenu ? bootstrap.Collapse.getOrCreateInstance(navbarMenu, { toggle: false }) : null;
 
     navLinks.forEach(function (link) {
       link.addEventListener('click', function (event) {
@@ -209,11 +210,9 @@
             window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
             history.pushState(null, '', this.hash);
           }
-          var collapseInstance = bootstrap.Collapse.getInstance(navbarMenu);
-          if (!collapseInstance) {
-            collapseInstance = new bootstrap.Collapse(navbarMenu, { toggle: false });
+          if (bsNavbarMenu) {
+            bsNavbarMenu.hide();
           }
-          collapseInstance.hide();
         }
       });
     });
