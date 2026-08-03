@@ -206,7 +206,7 @@
           var target = document.querySelector(this.hash);
           if (target) {
             var headerHeight = document.getElementById('navbar').offsetHeight;
-            var scrollToPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight + 10;
+            var scrollToPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight + 25;
             window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
             history.pushState(null, '', this.hash);
           }
