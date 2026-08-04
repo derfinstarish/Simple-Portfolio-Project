@@ -7,7 +7,47 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./portfolio.css">
+  <link rel="stylesheet" href="./portfolio.css">
+  <style>
+    .hero-slide {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(233,236,239,0.9));
+      color: #111;
+    }
+
+    .hero-background {
+      background-image: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.9);
+      padding: 2rem;
+      max-width: 500px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    }
+
+    .carousel-item {
+      display: none;
+    }
+
+    .carousel-item.active {
+      display: block;
+    }
+
+    .carousel-fade .carousel-item {
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    .carousel-fade .carousel-item.active {
+      opacity: 1;
+    }
+  </style>
   <script src="./portfolio.js"></script>
 </head>
 <body>
@@ -39,10 +79,10 @@
           <p class="text-muted small">© 2026 All rights reserved</p>
           <p class="text-muted small">Created by Derfin Starish D</p>
           <div class="d-flex gap-3 justify-content-center">
-            <a href="https://www.facebook.com/login.php/" class="text-secondary social-icon social-facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://twitter.com/login" class="text-secondary social-icon social-twitter"><i class="bi bi-twitter"></i></a>
-            <a href="https://www.instagram.com/accounts/login/" class="text-secondary social-icon social-instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/login" class="text-secondary social-icon social-linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.facebook.com/login.php/" class="text-secondary social-icon social-facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com/login" class="text-secondary social-icon social-twitter" title="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" class="text-secondary social-icon social-instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/login" class="text-secondary social-icon social-linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -52,8 +92,8 @@
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="hero-slide" style="background-image: url('https://picsum.photos/1200/800?random=1');">
-                <div class="container ps-md-5">
+              <div class="hero-slide hero-bg hero-background">
+                <div class="container ps-md-5 h-100 d-flex align-items-center">
                   <div class="hero-card" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out ">
                     <h1 class="display-6 fw-bold">Strategic Design for Brands</h1>
                     <p class="text-muted">100% HTML5 Bootstrap template responsive layout.</p>
@@ -176,10 +216,10 @@
     <p class="text-muted small mb-1">© 2026 All rights reserved</p>
     <p class="text-muted small mb-3">Created by Derfin Starish D</p>
     <div class="d-flex gap-3 justify-content-center">
-      <a href="https://www.facebook.com/login.php/" class="text-secondary social-icon social-facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://twitter.com/login" class="text-secondary social-icon social-twitter"><i class="bi bi-twitter"></i></a>
-      <a href="https://www.instagram.com/accounts/login/" class="text-secondary social-icon social-instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.linkedin.com/login" class="text-secondary social-icon social-linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.facebook.com/login.php/" class="text-secondary social-icon social-facebook" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://twitter.com/login" class="text-secondary social-icon social-twitter" aria-label="Twitter" title="Twitter"><i class="bi bi-twitter"></i></a>
+      <a href="https://www.instagram.com/accounts/login/" class="text-secondary social-icon social-instagram" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/login" class="text-secondary social-icon social-linkedin" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
     </div>
   </div>
 </footer>
